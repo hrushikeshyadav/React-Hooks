@@ -14,7 +14,7 @@ const UseContextFunc = () => {
   };
   return (
     <>
-      <div className="container" style={styleSheetContainer}>
+      <div className="container-div" style={styleSheetContainer}>
         <Button style={styleSheet} onClick={() => setIsDark((prev) => !prev)}>
           {isDark ? <BrightnessHighFill /> : <BrightnessHigh />}
         </Button>

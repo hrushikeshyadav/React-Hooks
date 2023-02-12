@@ -11,7 +11,11 @@ const ResizeWindow = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  return <h1>{count}</h1>;
+  return (
+    <h1>
+      Width of current window is : <b>{count}</b>
+    </h1>
+  );
 };
 
 export default ResizeWindow;

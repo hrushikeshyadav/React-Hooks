@@ -1,62 +1,36 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Form } from "react-bootstrap";
+import React, { useContext, useMemo, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { ThemeContext } from "../../AppContext";
 
+const makeDouble = (number) => {
+  for (let i = 0; i <= 1000000000; i++) {}
+  return number * 2;
+};
 const UseMemo = () => {
-  const { isDark } = useContext(ThemeContext);
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [check, setCheck] = useState(false);
-
-  useEffect(() => {
-    console.log("email", email);
-  }, [email]);
-  useEffect(() => {
-    console.log("pass", pass);
-  }, [pass]);
-  useEffect(() => {
-    console.log("check", check);
-  }, [check]);
+  const { isDark, setIsDark } = useContext(ThemeContext);
+  const [number, setNumber] = useState(0);
+  const doubleNumber = useMemo(() => {
+    return makeDouble(number);
+  }, [number]);
 
   const styleSheetContainer = {
     backgroundColor: !isDark ? "#333" : "#CCC",
+    color: isDark ? "#333" : "#CCC",
+    display: "flex",
+    flexDirection: "column",
   };
   return (
     <>
-      <div className="container" style={styleSheetContainer}>
-        <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Enter email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Password"
-              onChange={(e) => setPass(e.target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check
-              type="checkbox"
-              label="Check me out"
-              onChange={(e) => setCheck(e.target.checked)}
-            />
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
+      <div className="container-div" style={styleSheetContainer}>
+        <input
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          type="number"
+        />
+        <div>
+          The double of entered number is : <b>{doubleNumber}</b>
+        </div>
+        <Button onClick={() => setIsDark((prev) => !prev)}>Change Theme</Button>
       </div>
     </>
   );

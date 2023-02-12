@@ -1,16 +1,7 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 
 function Home() {
-  return (
-    <div>
-      <Button variant="dark">UseContext</Button>
-      <Button variant="dark">UseEffect</Button>
-      <Button variant="dark">UseMemo</Button>
-      <Button variant="dark">UseReducer</Button>
-      <Button variant="dark">UseTransition</Button>
-    </div>
-  );
+  return <h1>Welcome to React 18 hooks</h1>;
 }
 
 export default Home;

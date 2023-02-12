@@ -20,7 +20,7 @@ const UseReducer = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <div className="container" style={{ backgroundColor: "#CCC" }}>
+    <div className="container-div" style={{ backgroundColor: "#CCC" }}>
       <Button
         variant="primary"
         onClick={() => dispatch({ type: "increment", data: 5 })}
