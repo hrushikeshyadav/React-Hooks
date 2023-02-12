@@ -9,6 +9,7 @@ import Home from "./modules/hooks/Home";
 import UseTransition from "./modules/hooks/UseTransition";
 import UseDeferredValue from "./modules/hooks/UseDeferredValue";
 import UseRef from "./modules/hooks/UseRef";
+import UseCallback from "./modules/hooks/UseCallback";
 
 function ContentRoutes() {
   return (
@@ -22,6 +23,7 @@ function ContentRoutes() {
         <Route path="/use-memo" element={<UseMemo />}></Route>
         <Route path="/use-reducer" element={<UseReducer />}></Route>
         <Route path="/use-transition" element={<UseTransition />}></Route>
+        <Route path="/use-callback" element={<UseCallback />}></Route>
         <Route
           path="/use-deferred-value"
           element={<UseDeferredValue />}
