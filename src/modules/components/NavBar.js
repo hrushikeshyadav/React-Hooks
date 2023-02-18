@@ -32,6 +32,9 @@ function NavBar() {
           <Nav.Link>
             <Link to="/use-callback">UseCallback</Link>
           </Nav.Link>
+          <Nav.Link>
+            <Link to="/use-layout-effect">UseLayoutEffect</Link>
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
