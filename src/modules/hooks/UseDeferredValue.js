@@ -5,7 +5,7 @@ function UseDeferredValue() {
   const [name, setName] = useState("");
 
   return (
-    <div>
+    <div className="container-div">
       <input value={name} onChange={(e) => setName(e.target.value)} />
       <DataList name={name} />
     </div>

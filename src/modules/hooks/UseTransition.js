@@ -16,7 +16,7 @@ function UseTransition() {
     });
   };
   return (
-    <div>
+    <div className="container-div">
       <input value={name} onChange={handleChange} />
       {isPending
         ? "\n Loading....."

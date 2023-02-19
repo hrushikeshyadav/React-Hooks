@@ -11,6 +11,7 @@ import UseDeferredValue from "./modules/hooks/UseDeferredValue";
 import UseRef from "./modules/hooks/UseRef";
 import UseCallback from "./modules/hooks/UseCallback";
 import UseLayoutEffect from "./modules/hooks/useLayoutEffect";
+import UseImperativeHandle from "./modules/hooks/UseImperativeHandle";
 
 function ContentRoutes() {
   return (
@@ -29,6 +30,10 @@ function ContentRoutes() {
         <Route
           path="/use-deferred-value"
           element={<UseDeferredValue />}
+        ></Route>
+        <Route
+          path="/use-imperative-handle"
+          element={<UseImperativeHandle />}
         ></Route>
       </Routes>
     </>

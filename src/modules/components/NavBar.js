@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import logo from "../../assets/react18.png";
 
-function NavBar() {
+function NavBar({ className }) {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" className={className}>
       <Container>
-        <Navbar.Brand href="/">React-18</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img src={logo} alt="logo" />
+        </Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link>
             <Link to="/use-effect">UseEffect</Link>
@@ -34,6 +37,9 @@ function NavBar() {
           </Nav.Link>
           <Nav.Link>
             <Link to="/use-layout-effect">UseLayoutEffect</Link>
+          </Nav.Link>
+          <Nav.Link>
+            <Link to="/use-imperative-handle">UseImperativeHandle</Link>
           </Nav.Link>
         </Nav>
       </Container>

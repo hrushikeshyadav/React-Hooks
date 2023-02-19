@@ -5,8 +5,12 @@ import ContentRoutes from "./Routes";
 function App() {
   return (
     <>
-      <NavBar />
-      <ContentRoutes />
+      <div className="layout-div">
+        <NavBar className="navbar" />
+        <div className="content">
+          <ContentRoutes />
+        </div>
+      </div>
     </>
   );
 }

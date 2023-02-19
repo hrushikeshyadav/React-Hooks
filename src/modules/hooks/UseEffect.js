@@ -16,7 +16,7 @@ const UseEffect = () => {
 
   return (
     <>
-      {count}
+      <div>Resources loaded {count} times.</div>
       <Button variant="secondary" onClick={() => setResourceType("posts")}>
         Posts
       </Button>{" "}

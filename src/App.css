@@ -39,8 +39,52 @@
 
 .container-div {
   display: flex;
-  height: 92vh;
+  flex-direction: column;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   max-width: 100vw !important;
+}
+
+.layout-div {
+  display: flex;
+  align-items: flex-start;
+}
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  display: flex;
+  flex-direction: column;
+}
+.layout-div > .navbar {
+  flex: 0 1;
+}
+.layout-div > .content {
+  flex: 1 0;
+}
+.navbar > .container > a > img {
+  object-fit: contain;
+  width: 100%;
+  height: 50px;
+}
+.navbar-expand .navbar-nav {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+a {
+  color: rgba(232, 230, 227, 0.55);
+  text-decoration: none;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
 }

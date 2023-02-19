@@ -9,7 +9,7 @@ const UseRef = () => {
   });
 
   return (
-    <>
+    <div className="container-div">
       <input
         value={name}
         onChange={(e) => {
@@ -20,7 +20,7 @@ const UseRef = () => {
       <div>
         Component is rerendered <b>{count.current}</b> times.
       </div>
-    </>
+    </div>
   );
 };
 export default UseRef;
