@@ -1,21 +1,18 @@
 import React, { useImperativeHandle, useRef } from "react";
 import { Button, Card } from "react-bootstrap";
 
-function CustomModal({ show, setShow, modalRef }) {
-  const closeRef = useRef();
-  const saveRef = useRef();
+function CustomModal({ show, modalRef }) {
+  const closeRef = useRef(null);
+  const saveRef = useRef(null);
   useImperativeHandle(modalRef, () => {
     return {
-      focusClose: () => closeRef.current.focus(),
-      focusSave: () => saveRef.current.focus(),
+      focusClose: () => (closeRef.current.style.opacity = "0.5"),
+      focusSave: () => (saveRef.current.style.opacity = "0.5"),
     };
   });
+
   return (
-    <Card
-      className="mt-10"
-      hidden={!show}
-      onHide={() => setShow((prev) => !prev)}
-    >
+    <Card className="mt-10" hidden={!show}>
       <Card.Header>React 18</Card.Header>
       <Card.Body>
         <Card.Title>UseImperativeHandle hook</Card.Title>

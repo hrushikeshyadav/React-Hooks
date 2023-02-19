@@ -4,7 +4,7 @@ import CustomModal from "../components/Modal";
 
 function UseImperativeHandle() {
   const [show, setShow] = useState(false);
-  const ref = useRef();
+  const customRef = useRef();
 
   return (
     <div className="container-div">
@@ -16,16 +16,21 @@ function UseImperativeHandle() {
           <Button
             variant="secondary"
             className="mr-10"
-            onClick={() => ref.current.focusClose()}
+            onClick={() => customRef.current.focusClose()}
           >
             Focus Close
           </Button>
-          <Button variant="secondary" onClick={() => ref.current.focusSave()}>
+          <Button
+            variant="secondary"
+            onClick={() => customRef.current.focusSave()}
+          >
             Focus Save
           </Button>
         </div>
       )}
-      {show && <CustomModal modalRef={ref} setShow={setShow} show={show} />}
+      {show && (
+        <CustomModal modalRef={customRef} setShow={setShow} show={show} />
+      )}
     </div>
   );
 }
