@@ -12,6 +12,7 @@ import UseRef from "./modules/hooks/UseRef";
 import UseCallback from "./modules/hooks/UseCallback";
 import UseLayoutEffect from "./modules/hooks/useLayoutEffect";
 import UseImperativeHandle from "./modules/hooks/UseImperativeHandle";
+import UseId from "./modules/hooks/UseId";
 
 function ContentRoutes() {
   return (
@@ -35,6 +36,7 @@ function ContentRoutes() {
           path="/use-imperative-handle"
           element={<UseImperativeHandle />}
         ></Route>
+        <Route path="/use-id" element={<UseId />}></Route>
       </Routes>
     </>
   );

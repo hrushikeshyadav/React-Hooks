@@ -41,6 +41,9 @@ function NavBar({ className }) {
           <Nav.Link>
             <Link to="/use-imperative-handle">UseImperativeHandle</Link>
           </Nav.Link>
+          <Nav.Link>
+            <Link to="/use-id">UseId</Link>
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
