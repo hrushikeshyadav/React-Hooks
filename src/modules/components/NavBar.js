@@ -44,6 +44,9 @@ function NavBar({ className }) {
           <Nav.Link>
             <Link to="/use-id">UseId</Link>
           </Nav.Link>
+          <Nav.Link>
+            <Link to="/use-local-storage">UseLocalStorageHook</Link>
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>

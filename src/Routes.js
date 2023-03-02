@@ -13,6 +13,7 @@ import UseCallback from "./modules/hooks/UseCallback";
 import UseLayoutEffect from "./modules/hooks/useLayoutEffect";
 import UseImperativeHandle from "./modules/hooks/UseImperativeHandle";
 import UseId from "./modules/hooks/UseId";
+import UseLocalStorageHook from "./modules/hooks/UseLocalStorageHook";
 
 function ContentRoutes() {
   return (
@@ -37,6 +38,10 @@ function ContentRoutes() {
           element={<UseImperativeHandle />}
         ></Route>
         <Route path="/use-id" element={<UseId />}></Route>
+        <Route
+          path="/use-local-storage"
+          element={<UseLocalStorageHook />}
+        ></Route>
       </Routes>
     </>
   );
